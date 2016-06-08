@@ -1,0 +1,112 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>NEXT - {{exp_uid}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="{{ url_for('query_page.static', filename='js/next_widget.js' )}}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <!-- show instructions modal on load of page -->
+    <script>
+      $(window).load(function() {
+        // Set a timeout...and hide address bar
+        setTimeout(function(){
+          window.scrollTo(0, 1);
+        }, 0);
+        $('#directions').modal({backdrop:'static'});
+      });
+    </script>
+    <!-- debrief modal -->
+    <div class="modal fade" id="debrief" tabindex="-1" role="dialog" href="#">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="modal-title">Debrief</h1>
+          </div>
+          <div class="modal-body">
+            <h4 id="debrief_text"></h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container" style="height:90%">
+      <!-- instructions at top of page -->
+      <div id="top_instructions" class="row" >
+        <center><p id="directions_text"></p></center>
+      </div>
+      <!-- widget wrapper -->
+      <div id="wrapper">
+        <center><h1>Loading...</h1></center>
+      </div>
+
+    </div>
+    <script>
+      next_widget.setUrl("");
+      var tries =  {{num_tries}};
+      var div_id = "wrapper";
+      var exp_uid = "{{exp_uid}}";
+
+      var participant_uid = next_widget.makeRandomString(30);
+      var info_args = {
+        name: "getInfo",
+        exp_uid: exp_uid,
+        args: {}
+      };
+      var args = {
+        name: "getQuery",
+        exp_uid: exp_uid,
+        args: {participant_uid: participant_uid, widget: true}
+      };
+
+      var exp_uid_list = [
+                          "7a7486a00faf7089c056ae68b048cc", // exp1
+                          "879df4c0ed247fb089aa9efbdc3c8b"  // exp2
+      ];
+      var app_id = 'PoolBasedTripletMDS'
+
+      var callbacks = {
+        processAnswer_success: function() {
+          var idx_to_use = Math.floor(exp_uid_list.length * Math.random());
+          console.log("Selecting the (below) algorithm)");
+          console.log(idx_to_use);
+          var args = {name: "getQuery",
+                      exp_uid: exp_uid_list[idx_to_use],
+                      app_id: app_id,
+                      args: {participant_uid: participant_uid,
+                             widget: true}
+                     };
+          if(tries > 0){
+            tries -= 1;
+            next_widget.getQuery(div_id, args, callbacks);
+          } else{
+            $('#instructions').hide();
+            $('#wrapper').hide();
+            $('#debrief').show();
+            $('#debrief').modal('show');
+          }
+        },
+        getQuery_success: function(){
+          console.log("success")
+        },
+        getInfo_success: function(response){
+          instructions = response.response["instructions"];
+          $('#directions_text').html(instructions);
+          debrief = response.response["debrief"]+" "+participant_uid;
+          $('#debrief_text').html(debrief);
+          tries = response.response["num_tries"];
+        },
+        widget_failure: function(){
+          $('#instructions').hide();
+          $('#query').hide();
+          $('#debrief').show();
+          $('#debrief').modal('show');
+        }
+      }
+      next_widget.getQuery(div_id, args, callbacks);
+    </script>
+  </body>
+</html>
+</html>
