@@ -45,7 +45,9 @@
     </div>
     <script>
       next_widget.setUrl("");
-      var tries =  {{num_tries}};
+      // make sure total_tries == tries
+      var tries =  10;
+      var total_tries = 10;
       var div_id = "wrapper";
       var exp_uid = "{{exp_uid}}";
 
@@ -61,19 +63,23 @@
         args: {participant_uid: participant_uid, widget: true}
       };
 
-      var exp_uid_list = [
-                          "7a7486a00faf7089c056ae68b048cc", // exp1
-                          "879df4c0ed247fb089aa9efbdc3c8b"  // exp2
-      ];
       var app_id = 'PoolBasedTripletMDS'
 
       var callbacks = {
         processAnswer_success: function() {
-          var idx_to_use = Math.floor(exp_uid_list.length * Math.random());
-          console.log("Selecting the (below) algorithm)");
-          console.log(idx_to_use);
+          var validation_queries = [1, 4, 5, 6];
+          var exp_uid;
+          if (validation_queries.indexOf(total_tries - tries) > -1){
+              exp_uid = "5a60f0a6f0619138085ec3d7ba4cc7";
+          } else {
+              exp_uid = "816271cf7cd638130f90bb03e0c73d";
+          }
+          console.log('---');
+          console.log(tries);
+          console.log(exp_uid);
+
           var args = {name: "getQuery",
-                      exp_uid: exp_uid_list[idx_to_use],
+                      exp_uid: exp_uid,
                       app_id: app_id,
                       args: {participant_uid: participant_uid,
                              widget: true}
