@@ -1,0 +1,201 @@
+Center,Left,Right,Center properties,Left properties,Right properties
+8,12,7,2 mult,2 mult & 3 mult,prime
+4,10,5,2 mult & square,2 mult & 5 mult,prime & 5 mult
+11,3,4,prime,prime & 3 mult,2 mult & square
+10,4,5,2 mult & 5 mult,2 mult & square,prime & 5 mult
+4,12,7,2 mult & square,2 mult & 3 mult,prime
+9,6,4,3 mult & square,2 mult & 3 mult,2 mult & square
+1,4,3,prime & square,2 mult & square,prime & 3 mult
+7,11,6,prime,prime,2 mult & 3 mult
+10,2,3,2 mult & 5 mult,2 mult,prime & 3 mult
+12,4,7,2 mult & 3 mult,2 mult & square,prime
+7,1,4,prime,prime & square,2 mult & square
+3,1,2,prime & 3 mult,prime & square,2 mult
+1,11,4,prime & square,prime,2 mult & square
+8,6,9,2 mult,2 mult & 3 mult,3 mult & square
+9,1,2,3 mult & square,prime & square,2 mult
+5,10,1,prime & 5 mult,2 mult & 5 mult,prime & square
+11,5,6,prime,prime & 5 mult,2 mult & 3 mult
+10,12,7,2 mult & 5 mult,2 mult & 3 mult,prime
+11,7,8,prime,prime,2 mult
+12,2,3,2 mult & 3 mult,2 mult,prime & 3 mult
+5,3,2,prime & 5 mult,prime & 3 mult,2 mult
+6,12,4,2 mult & 3 mult,2 mult & 3 mult,2 mult & square
+4,1,2,2 mult & square,prime & square,2 mult
+6,10,5,2 mult & 3 mult,2 mult & 5 mult,prime & 5 mult
+10,6,9,2 mult & 5 mult,2 mult & 3 mult,3 mult & square
+3,7,8,prime & 3 mult,prime,2 mult
+1,5,6,prime & square,prime & 5 mult,2 mult & 3 mult
+8,2,1,2 mult,2 mult,prime & square
+12,6,9,2 mult & 3 mult,2 mult & 3 mult,3 mult & square
+9,4,3,3 mult & square,2 mult & square,prime & 3 mult
+12,9,1,2 mult & 3 mult,3 mult & square,prime & square
+6,3,2,2 mult & 3 mult,prime & 3 mult,2 mult
+7,3,2,prime,prime & 3 mult,2 mult
+3,9,1,prime & 3 mult,3 mult & square,prime & square
+2,6,9,2 mult,2 mult & 3 mult,3 mult & square
+1,3,2,prime & square,prime & 3 mult,2 mult
+6,9,1,2 mult & 3 mult,3 mult & square,prime & square
+4,6,9,2 mult & square,2 mult & 3 mult,3 mult & square
+2,12,7,2 mult,2 mult & 3 mult,prime
+5,7,8,prime & 5 mult,prime,2 mult
+11,1,2,prime,prime & square,2 mult
+6,4,7,2 mult & 3 mult,2 mult & square,prime
+5,1,4,prime & 5 mult,prime & square,2 mult & square
+4,9,3,2 mult & square,3 mult & square,prime & 3 mult
+2,10,3,2 mult,2 mult & 5 mult,prime & 3 mult
+6,12,9,2 mult & 3 mult,2 mult & 3 mult,3 mult & square
+9,12,2,3 mult & square,2 mult & 3 mult,2 mult
+10,5,1,2 mult & 5 mult,prime & 5 mult,prime & square
+5,11,6,prime & 5 mult,prime,2 mult & 3 mult
+6,2,3,2 mult & 3 mult,2 mult,prime & 3 mult
+2,4,5,2 mult,2 mult & square,prime & 5 mult
+1,9,2,prime & square,3 mult & square,2 mult
+8,10,3,2 mult,2 mult & 5 mult,prime & 3 mult
+7,5,8,prime,prime & 5 mult,2 mult
+3,6,4,prime & 3 mult,2 mult & 3 mult,2 mult & square
+12,8,1,2 mult & 3 mult,2 mult,prime & square
+10,8,1,2 mult & 5 mult,2 mult,prime & square
+12,6,4,2 mult & 3 mult,2 mult & 3 mult,2 mult & square
+6,8,1,2 mult & 3 mult,2 mult,prime & square
+3,12,2,prime & 3 mult,2 mult & 3 mult,2 mult
+4,8,1,2 mult & square,2 mult,prime & square
+8,4,5,2 mult,2 mult & square,prime & 5 mult
+9,3,1,3 mult & square,prime & 3 mult,prime & square
+12,3,2,2 mult & 3 mult,prime & 3 mult,2 mult
+3,11,4,prime & 3 mult,prime,2 mult & square
+12,10,5,2 mult & 3 mult,2 mult & 5 mult,prime & 5 mult
+3,5,6,prime & 3 mult,prime & 5 mult,2 mult & 3 mult
+1,7,8,prime & square,prime,2 mult
+4,2,3,2 mult & square,2 mult,prime & 3 mult
+2,8,1,2 mult,2 mult,prime & square
+10,4,9,2 mult & 5 mult,2 mult & square,3 mult & square
+3,7,6,prime & 3 mult,prime,2 mult & 3 mult
+8,4,1,2 mult,2 mult & square,prime & square
+5,9,10,prime & 5 mult,3 mult & square,2 mult & 5 mult
+5,8,4,prime & 5 mult,2 mult,2 mult & square
+11,9,8,prime,3 mult & square,2 mult
+8,12,2,2 mult,2 mult & 3 mult,2 mult
+10,9,7,2 mult & 5 mult,3 mult & square,prime
+5,10,3,prime & 5 mult,2 mult & 5 mult,prime & 3 mult
+9,4,6,3 mult & square,2 mult & square,2 mult & 3 mult
+4,5,1,2 mult & square,prime & 5 mult,prime & square
+11,5,12,prime,prime & 5 mult,2 mult & 3 mult
+1,10,3,prime & square,2 mult & 5 mult,prime & 3 mult
+9,1,10,3 mult & square,prime & square,2 mult & 5 mult
+11,8,3,prime,2 mult,prime & 3 mult
+6,5,3,2 mult & 3 mult,prime & 5 mult,prime & 3 mult
+1,7,6,prime & square,prime,2 mult & 3 mult
+11,7,4,prime,prime,2 mult & square
+12,5,2,2 mult & 3 mult,prime & 5 mult,2 mult
+8,9,2,2 mult,3 mult & square,2 mult
+9,12,7,3 mult & square,2 mult & 3 mult,prime
+6,11,5,2 mult & 3 mult,prime,prime & 5 mult
+5,12,1,prime & 5 mult,2 mult & 3 mult,prime & square
+6,3,12,2 mult & 3 mult,prime & 3 mult,2 mult & 3 mult
+12,4,9,2 mult & 3 mult,2 mult & square,3 mult & square
+2,9,1,2 mult,3 mult & square,prime & square
+1,11,10,prime & square,prime,2 mult & 5 mult
+11,3,9,prime,prime & 3 mult,3 mult & square
+11,6,4,prime,2 mult & 3 mult,2 mult & square
+8,3,9,2 mult,prime & 3 mult,3 mult & square
+6,5,3,2 mult & 3 mult,prime & 5 mult,prime & 3 mult
+7,11,3,prime,prime,prime & 3 mult
+9,12,3,3 mult & square,2 mult & 3 mult,prime & 3 mult
+6,3,4,2 mult & 3 mult,prime & 3 mult,2 mult & square
+1,7,10,prime & square,prime,2 mult & 5 mult
+1,12,3,prime & square,2 mult & 3 mult,prime & 3 mult
+2,5,11,2 mult,prime & 5 mult,prime
+8,11,7,2 mult,prime,prime
+1,8,6,prime & square,2 mult,2 mult & 3 mult
+4,9,6,2 mult & square,3 mult & square,2 mult & 3 mult
+11,2,3,prime,2 mult,prime & 3 mult
+10,4,2,2 mult & 5 mult,2 mult & square,2 mult
+11,2,3,prime,2 mult,prime & 3 mult
+1,6,5,prime & square,2 mult & 3 mult,prime & 5 mult
+3,9,7,prime & 3 mult,3 mult & square,prime
+8,3,4,2 mult,prime & 3 mult,2 mult & square
+4,5,9,2 mult & square,prime & 5 mult,3 mult & square
+4,8,2,2 mult & square,2 mult,2 mult
+11,12,4,prime,2 mult & 3 mult,2 mult & square
+4,6,12,2 mult & square,2 mult & 3 mult,2 mult & 3 mult
+3,12,9,prime & 3 mult,2 mult & 3 mult,3 mult & square
+9,1,7,3 mult & square,prime & square,prime
+9,7,11,3 mult & square,prime,prime
+6,8,2,2 mult & 3 mult,2 mult,2 mult
+2,11,7,2 mult,prime,prime
+12,9,7,2 mult & 3 mult,3 mult & square,prime
+2,11,5,2 mult,prime,prime & 5 mult
+9,2,1,3 mult & square,2 mult,prime & square
+11,12,4,prime,2 mult & 3 mult,2 mult & square
+2,6,5,2 mult,2 mult & 3 mult,prime & 5 mult
+5,8,7,prime & 5 mult,2 mult,prime
+9,10,3,3 mult & square,2 mult & 5 mult,prime & 3 mult
+3,10,6,prime & 3 mult,2 mult & 5 mult,2 mult & 3 mult
+6,7,8,2 mult & 3 mult,prime,2 mult
+6,2,7,2 mult & 3 mult,2 mult,prime
+12,5,8,2 mult & 3 mult,prime & 5 mult,2 mult
+12,5,10,2 mult & 3 mult,prime & 5 mult,2 mult & 5 mult
+8,12,9,2 mult,2 mult & 3 mult,3 mult & square
+2,8,12,2 mult,2 mult,2 mult & 3 mult
+12,4,5,2 mult & 3 mult,2 mult & square,prime & 5 mult
+11,4,10,prime,2 mult & square,2 mult & 5 mult
+4,2,10,2 mult & square,2 mult,2 mult & 5 mult
+3,10,12,prime & 3 mult,2 mult & 5 mult,2 mult & 3 mult
+10,5,1,2 mult & 5 mult,prime & 5 mult,prime & square
+7,1,12,prime,prime & square,2 mult & 3 mult
+2,6,4,2 mult,2 mult & 3 mult,2 mult & square
+9,12,10,3 mult & square,2 mult & 3 mult,2 mult & 5 mult
+3,11,9,prime & 3 mult,prime,3 mult & square
+11,5,8,prime,prime & 5 mult,2 mult
+5,6,1,prime & 5 mult,2 mult & 3 mult,prime & square
+12,5,6,2 mult & 3 mult,prime & 5 mult,2 mult & 3 mult
+7,12,1,prime,2 mult & 3 mult,prime & square
+1,7,2,prime & square,prime,2 mult
+9,8,5,3 mult & square,2 mult,prime & 5 mult
+10,11,3,2 mult & 5 mult,prime,prime & 3 mult
+2,8,7,2 mult,2 mult,prime
+1,8,6,prime & square,2 mult,2 mult & 3 mult
+3,9,4,prime & 3 mult,3 mult & square,2 mult & square
+4,2,7,2 mult & square,2 mult,prime
+4,8,10,2 mult & square,2 mult,2 mult & 5 mult
+8,7,10,2 mult,prime,2 mult & 5 mult
+1,3,12,prime & square,prime & 3 mult,2 mult & 3 mult
+12,6,9,2 mult & 3 mult,2 mult & 3 mult,3 mult & square
+1,8,2,prime & square,2 mult,2 mult
+1,4,5,prime & square,2 mult & square,prime & 5 mult
+2,9,12,2 mult,3 mult & square,2 mult & 3 mult
+5,4,7,prime & 5 mult,2 mult & square,prime
+1,2,11,prime & square,2 mult,prime
+10,5,4,2 mult & 5 mult,prime & 5 mult,2 mult & square
+1,11,12,prime & square,prime,2 mult & 3 mult
+8,10,12,2 mult,2 mult & 5 mult,2 mult & 3 mult
+9,8,1,3 mult & square,2 mult,prime & square
+3,9,4,prime & 3 mult,3 mult & square,2 mult & square
+9,12,3,3 mult & square,2 mult & 3 mult,prime & 3 mult
+2,7,5,2 mult,prime,prime & 5 mult
+10,9,7,2 mult & 5 mult,3 mult & square,prime
+12,6,5,2 mult & 3 mult,2 mult & 3 mult,prime & 5 mult
+10,12,5,2 mult & 5 mult,2 mult & 3 mult,prime & 5 mult
+12,4,10,2 mult & 3 mult,2 mult & square,2 mult & 5 mult
+3,12,2,prime & 3 mult,2 mult & 3 mult,2 mult
+8,12,7,2 mult,2 mult & 3 mult,prime
+4,10,5,2 mult & square,2 mult & 5 mult,prime & 5 mult
+11,3,4,prime,prime & 3 mult,2 mult & square
+10,4,5,2 mult & 5 mult,2 mult & square,prime & 5 mult
+4,12,7,2 mult & square,2 mult & 3 mult,prime
+9,6,4,3 mult & square,2 mult & 3 mult,2 mult & square
+1,4,3,prime & square,2 mult & square,prime & 3 mult
+7,11,6,prime,prime,2 mult & 3 mult
+10,2,3,2 mult & 5 mult,2 mult,prime & 3 mult
+12,4,7,2 mult & 3 mult,2 mult & square,prime
+7,1,4,prime,prime & square,2 mult & square
+3,1,2,prime & 3 mult,prime & square,2 mult
+1,11,4,prime & square,prime,2 mult & square
+8,6,9,2 mult,2 mult & 3 mult,3 mult & square
+9,1,2,3 mult & square,prime & square,2 mult
+5,10,1,prime & 5 mult,2 mult & 5 mult,prime & square
+11,5,6,prime,prime & 5 mult,2 mult & 3 mult
+10,12,7,2 mult & 5 mult,2 mult & 3 mult,prime
+11,7,8,prime,prime,2 mult
+12,2,3,2 mult & 3 mult,2 mult,prime & 3 mult
