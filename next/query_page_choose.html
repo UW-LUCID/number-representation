@@ -46,8 +46,8 @@
     <script>
       next_widget.setUrl("");
       // make sure total_tries == tries
-      var tries =  10;
-      var total_tries = 10;
+      var tries =  200;
+      var total_tries = 200;
       var div_id = "wrapper";
       var exp_uid = "{{exp_uid}}";
 
@@ -67,16 +67,18 @@
 
       var callbacks = {
         processAnswer_success: function() {
-          var validation_queries = [1, 4, 5, 6];
+          var validation_queries = # random list;
           var exp_uid;
-          if (validation_queries.indexOf(total_tries - tries) > -1){
-              exp_uid = "5a60f0a6f0619138085ec3d7ba4cc7";
+          var index_ = total_tries - tries;
+
+          var useValidation = validation_queries.indexOf(index_) > -1;
+          console.log(useValidation, index_);
+          console.log(validation_queries);
+          if (useValidation){
+              exp_uid = ""; # ValidationSampling
           } else {
-              exp_uid = "816271cf7cd638130f90bb03e0c73d";
+              exp_uid = ""; # UncertaintySampling
           }
-          console.log('---');
-          console.log(tries);
-          console.log(exp_uid);
 
           var args = {name: "getQuery",
                       exp_uid: exp_uid,
