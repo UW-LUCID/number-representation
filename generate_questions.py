@@ -1,5 +1,6 @@
 import numpy as np
 import random
+import pandas as pd
 
 
 def generate(targets):
@@ -26,7 +27,7 @@ def format_csv():
 
 def find_properties(n):
     props = []
-    if n in {1, 3, 5, 7, 11, 13}:
+    if n in {2, 3, 5, 7, 11, 13}:
         props += ['prime']
     for mul in [2, 3, 5]:
         if n % mul == 0:
@@ -49,7 +50,7 @@ def print_csv(lines):
     print("\n".join(lines), file=open(filename, 'w'))
 
 
-if __name__ == "__main__":
+def generate_questions_exploiting_properties():
     props = {n: find_properties(n) for n in 1 + np.arange(12)}
 
     possible_queries = {}
@@ -67,3 +68,42 @@ if __name__ == "__main__":
 
     lines = format_csv()
     print_csv(lines)
+
+
+def generate_question(a, b=-1, c=-1, n=12):
+    first_loop_run = False
+    while not (first_loop_run or (a != b and a != c and b != c)):
+        b = np.random.randint(n) + 1
+        c = np.random.randint(n) + 1
+        #  print(a, b, c)
+        #first_loop_run = True
+    return [a, b, c]
+
+
+def generate_random_queries(num_questions=192, num_targets=12):
+    #  np.random.seed(42)
+    assert num_questions / num_targets % 1.0 == 0.0
+    repeats = num_questions / num_targets
+    top_num = (np.arange(12) + 1).repeat(repeats)
+    queries = [generate_question(a) for a in top_num]
+    return queries
+
+if __name__ == "__main__":
+    queries = generate_random_queries()
+    random.shuffle(queries)
+    parts = [queries[len(queries)*i//4:len(queries)*(i+1)//4]
+             for i in range(4)]
+    parts = np.array(parts)
+    a = [{'n': q[0], 'part': i}
+         for i, part in enumerate(parts)
+         for q in part]
+
+    df = pd.DataFrame(a)
+    import altair
+    c = altair.Chart(df).mark_bar().encode(
+            x='n:N',
+            y='n',
+            color='part'
+    )
+    with open('randomness.html', 'w') as f:
+        print(c.to_html(), file=f)
