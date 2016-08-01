@@ -51,7 +51,6 @@ def run_all(assert_200, alg):
     pool = Pool(processes=num_clients)
     # input test parameters
     delta = 0.01
-    # supported_alg_ids = ['RandomSampling','RandomSampling','UncertaintySampling','CrowdKernel', 'STE']
     supported_alg_ids = [alg]
 
     alg_list = []
@@ -164,8 +163,8 @@ def put_exp_uids_in(name, exp_uids):
             if 'ValidationSampling' in line:
                 exp_uid = '{}'.format(exp_uids['ValidationSampling'])
                 process = True
-            if 'UncertaintySampling' in line:
-                exp_uid = '{}'.format(exp_uids['UncertaintySampling'])
+            if 'STE' in line:
+                exp_uid = '{}'.format(exp_uids['STE'])
                 process = True
             if process:
                 line = ' '*15 + 'exp_uid = "{}";\n'.format(exp_uid)
@@ -180,7 +179,7 @@ if __name__ == '__main__':
     exp_uid_filename = 'exp_uids.pkl'
     if args['launch']:
         exp_uids = {}
-        for alg in ['UncertaintySampling', 'ValidationSampling']:
+        for alg in ['STE', 'ValidationSampling']:
             exp_uid = run_all(True, alg)
             exp_uids[alg] = exp_uid
         print(exp_uids)
@@ -199,4 +198,4 @@ if __name__ == '__main__':
                   '/usr/local/next-discovery/next/query_page/templates/query_page_choose.html')
 
         print('\nQuery URL:\nhttp://{}:8000/query/query_page/query_page_choose/{}'
-              .format(HOSTNAME, exp_uids['UncertaintySampling']))
+              .format(HOSTNAME, exp_uids['STE']))
