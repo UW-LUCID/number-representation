@@ -1,0 +1,10 @@
+(dp0
+S'STE'
+p1
+V688ed145109ea52b197aa459c5466b
+p2
+sS'ValidationSampling'
+p3
+V074031ae4df50e576c11a4fb094995
+p4
+s.
