@@ -36,9 +36,9 @@ def format_triplet_response_json(response_dict):
                     target_winner = index
             if target_winner:
                 # Append the center, left, right targets
-                line.extend([targets['center']['target_id'], \
-                             targets['left']['target_id'],\
-                             targets['right']['target_id']])
+                line.extend([targets['center']['primary_description'], \
+                             targets['left']['primary_description'],\
+                             targets['right']['primary_description']])
                 # Append the target winner
                 line.append(target_winner['target_id'])
                 # Append the alg_label
@@ -53,8 +53,10 @@ if __name__ == "__main__":
     dir_ = 'data-save/'
     filenames = {'STE': '2016-08-03-participant1-STE-responses.json',
                  'validation': '2016-08-03-participant1-validation-respones.json'}
-    filenames = {'STE': '2016-08-08-participant-3-STE.json',
-                 'validation': '2016-08-08-participant-3-ValidationSampling.json'}
+    #  filenames = {'STE': '2016-08-08-participant-3-STE.json',
+                 #  'validation': '2016-08-08-participant-3-ValidationSampling.json'}
+    #  out = '2016-08-08-participant3-responses.csv'
+    out = '2016-08-03-participant1-responses.csv'
     responses = {}
     for alg, filename in filenames.items():
         with open(dir_ + filename) as f:
@@ -62,5 +64,4 @@ if __name__ == "__main__":
         responses[alg] = format_triplet_response_json(response)
     responses = pd.concat(responses)
 
-    out = '2016-08-08-participant3-responses.csv'
     responses.to_csv(out)
