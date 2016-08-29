@@ -1,2 +1,4 @@
 next/exp_uids.pyc
-__pycache__
+next/data-save/*
+__pycache__/*
+*.ipynb_checkpoints
