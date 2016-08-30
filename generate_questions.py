@@ -151,7 +151,7 @@ def get_n_questions_with_prop(n, prop, props):
     return [a, b, c]
 
 
-def get_question_with_prop(n, prop, props, negate=False, seed=42):
+def get_question(n, prop, props, negate=False, seed=42):
     """ n is the starting number """
     pos_n = {i: (prop in props[i]) == (prop in props[n]) for i in props}
     if negate:
@@ -168,27 +168,60 @@ def get_question_with_prop(n, prop, props, negate=False, seed=42):
     r = np.random.RandomState(seed)
     r.shuffle(diffs)
     to_ask = choices[np.argmin(diffs)]
+    to_ask = random.choice(choices)
     return {'n': n, 'to ask': to_ask, 'property': prop,
             'match': 'no' if negate else 'yes'}
 
 
-if __name__ == "__main__":
+def get_questions(mean_limit=(4.0, 5.0)):
     props = {n: find_properties(n) for n in 1 + np.arange(12)}
     possible_properties = ['prime', 'large', 'even']  # , '3 mult', '5 mult']
-    property_questions = {prop: [get_n_questions_with_prop(n + 1, prop, props)
-                                 for n in range(12)]
-                          for prop in possible_properties}
-    r = get_question_with_prop(4, 'even', props)
 
-    negations = [True, False] * 6
-    np.random.shuffle(negations)
+    diffs = np.array([mean_limit[1] + 1] * 3)
+    while True:
+        negations = [True, False] * 6
+        np.random.shuffle(negations)
 
-    questions = [get_question_with_prop(n, prop, props, negate=negate)
-                 for prop in possible_properties
-                 for n, negate in zip(props, negations)]
+        questions = [get_question(n, prop, props, negate=negate)
+                     for prop in possible_properties
+                     for n, negate in zip(props, negations)]
 
+        df = pd.DataFrame(questions)
+
+        diffs = []
+        diffs_in_range = []
+        for prop in ['prime', 'even', 'large']:
+            temp_df = df.query('property == "{prop}"'.format(prop=prop))
+            diff = np.abs(temp_df['n'] - temp_df['to ask']).mean()
+            diffs_in_range += [diff > mean_limit[0] and diff < mean_limit[1]]
+            diffs += [diff]
+
+        if all(diffs_in_range):
+            break
+    return questions
+
+
+if __name__ == "__main__":
+    questions = get_questions()
     df = pd.DataFrame(questions)
     print(df)
+    df.to_csv('fmri_questions.csv')
+
+
+    if False:
+        means = {}
+        for prop in ['prime', 'even', 'large']:
+            temp_df = df.query('property == "{prop}"'.format(prop=prop))
+            diff = np.abs(temp_df['n'] - temp_df['to ask']).mean()
+            means[prop] = diff
+            means = pd.DataFrame(means_dist)
+        import seaborn as sns
+        import matplotlib.pyplot as plt
+        for prop in means.columns:
+            sns.distplot(means[prop], kde=True, label=prop)
+        plt.legend(loc='best')
+        plt.title('Distribution of mean distance between two numbers in question')
+        plt.show()
 
     if False:
         df.to_csv('fmri_questions.csv')
